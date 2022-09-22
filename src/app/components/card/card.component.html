@@ -1,7 +1,7 @@
 <div class="container">
     <div [ngClass]="toggleProperty ? 'flipped' : ''" class="card">
       <div class="front">
-        <h3>Word</h3>
+        <h2>Word</h2>
         <ng-content select="card-front"></ng-content>
         <div class="arrow-icon" (click)="toggle()">
           <i class="ion-ios-arrow-back"></i>

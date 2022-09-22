@@ -13,9 +13,9 @@
     position: absolute;
     transform-style: preserve-3d;
     transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border-radius: 6px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    box-sizing: border-box;
+    /* border-radius: 6px; */
+    /* box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); */
+    /* box-sizing: border-box; */
   }
   
   .card .front,
@@ -25,8 +25,12 @@
     height: 100%;
     backface-visibility: hidden;
     border-radius: 6px;
-    background-color: #128bea;
-    color: #fff;
+    background: hsla(333, 69%, 97%, 1);
+    background: linear-gradient(315deg, hsla(333, 69%, 97%, 1) 38%, hsla(117, 24%, 69%, 1) 96%);
+    background: -moz-linear-gradient(315deg, hsla(333, 69%, 97%, 1) 38%, hsla(117, 24%, 69%, 1) 96%);
+    background: -webkit-linear-gradient(315deg, hsla(333, 69%, 97%, 1) 38%, hsla(117, 24%, 69%, 1) 96%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FDF4F8", endColorstr="#9EC29C", GradientType=1 );
+    color: #3A405A;
     display: grid;
     place-items: center;
   }
@@ -51,6 +55,6 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 1px solid #fff;
+    border: 2px solid #3A405A;
   }
   

@@ -6,11 +6,10 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 const routes: Routes = [
   {
     path: 'home',
-    component: HomePageComponent,
-    pathMatch: 'full'
-    
+    component: HomePageComponent,    
   },
-  {path:'card', component: CardComponent}
+  {path:'card', 
+  component: CardComponent}
 ];
 
 @NgModule({

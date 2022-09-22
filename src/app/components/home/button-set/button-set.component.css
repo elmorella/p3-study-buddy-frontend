@@ -1,0 +1,16 @@
+.card{
+    
+    /* border-width: 3px; */
+    /* border-color: #839073; */
+    margin-bottom: 30px;
+    box-shadow: -10px -10px 15px #C1D9C1;
+}
+
+.card-title{
+    text-align: center;
+    color: #3A405A;
+}
+
+.card-subtitle{
+    color: #3A405A;
+}

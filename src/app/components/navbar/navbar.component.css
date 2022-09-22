@@ -1,0 +1,25 @@
+.navbar {
+    background: hsla(333, 69%, 97%, 1);
+    background: linear-gradient(315deg, hsla(333, 69%, 97%, 1) 31%, hsla(349, 78%, 62%, 1) 96%);
+    background: -moz-linear-gradient(315deg, hsla(333, 69%, 97%, 1) 31%, hsla(349, 78%, 62%, 1) 96%);
+    background: -webkit-linear-gradient(315deg, hsla(333, 69%, 97%, 1) 31%, hsla(349, 78%, 62%, 1) 96%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FDF4F8", endColorstr="#EA526F", GradientType=1 );
+
+    /* border-bottom-style: solid; */
+    border-bottom-width: 2px;
+    border-bottom-color: #839073;
+}
+
+.nav-link{
+    color: #3A405A;
+}
+
+.navbar-brand{
+    color: #839073;
+}
+
+.btn {
+    border-color: #FEFBFD;
+    border-width: 2px;
+    color: #FEFBFD;
+}

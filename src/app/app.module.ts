@@ -10,6 +10,8 @@ import { ButtonSetComponent } from './components/home/button-set/button-set.comp
 import { FooterComponent } from './components/footer/footer.component';
 
 
+import { routingComponents } from './app-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +20,12 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     ButtonSetComponent,
     FooterComponent,
-  
+    routingComponents
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

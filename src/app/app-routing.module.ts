@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CardComponent } from './components/card/card.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [
@@ -7,7 +8,9 @@ const routes: Routes = [
     path: 'home',
     component: HomePageComponent,
     pathMatch: 'full'
+    
   },
+  {path:'card', component: CardComponent}
 ];
 
 @NgModule({
@@ -15,3 +18,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents = [
+  CardComponent
+]

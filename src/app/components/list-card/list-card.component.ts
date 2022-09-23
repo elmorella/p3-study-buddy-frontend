@@ -13,7 +13,6 @@ export class ListCardComponent implements OnInit {
 
   constructor(private cardService: CardService) { 
     this.cardSet = this.cardService.getCardSet()
-    console.log(this.cardSet)
   }
 
   ngOnInit(): void {

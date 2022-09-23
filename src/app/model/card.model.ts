@@ -1,5 +1,5 @@
 export class Card {
-    public cardId?: number
-    public title?: String
-    public description?: String
+    cardId?: number
+    title?: String
+    description?: String
 }

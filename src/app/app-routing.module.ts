@@ -13,8 +13,8 @@ const routes: Routes = [
   { path: '', component: ListCardComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'card', component: CardComponent },
-  { path: 'cardlist', component: ListCardComponent },
-  { path: 'noteslist', component: ListNotesComponent }
+  { path: 'cards', component: ListCardComponent },
+  { path: 'notes', component: ListNotesComponent }
 ]
 
 @NgModule({

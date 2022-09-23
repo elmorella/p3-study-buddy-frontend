@@ -12,7 +12,8 @@ import { CardService } from './services/card.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [CardService],
   bootstrap: [AppComponent]

@@ -1,0 +1,16 @@
+.navbar{
+    background: hsla(333, 69%, 97%, 1);
+    background: linear-gradient(135deg, hsla(333, 69%, 97%, 1) 31%, hsla(349, 78%, 62%, 1) 96%);
+    background: -moz-linear-gradient(135deg, hsla(333, 69%, 97%, 1) 31%, hsla(349, 78%, 62%, 1) 96%);
+    background: -webkit-linear-gradient(135deg, hsla(333, 69%, 97%, 1) 31%, hsla(349, 78%, 62%, 1) 96%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FDF4F8", endColorstr="#EA526F", GradientType=1 );
+
+    /* border-top-style: solid; */
+    border-top-width: 2px;
+    border-top-color: #839073;
+    margin-top: 50px;
+}
+
+.navbar-brand{
+    color: #FEFBFD;
+}

@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { NoteService } from './services/note.service';
 import { CardService } from './services/card.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents
+    
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@ import { Note } from '../model/note.model';
   providedIn: 'root'
 })
 export class NoteService {
-  notes: Array<Note> = []
+  notes: Note[] = []
 
   constructor() {
 

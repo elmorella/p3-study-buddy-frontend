@@ -9,7 +9,7 @@ import { NoteService } from 'src/app/services/note.service';
 })
 export class ListNotesComponent implements OnInit {
 
-  notes: Array<Note> = []
+  notes: Note[] = []
 
   constructor(private cardService: NoteService) {
     this.notes = this.cardService.getAllNotes()

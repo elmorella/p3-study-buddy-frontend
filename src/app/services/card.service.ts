@@ -5,7 +5,7 @@ import { Card } from '../model/card.model';
   providedIn: 'root'
 })
 export class CardService {
-  cardSet: Array<Card> = []
+  cardSet: Card[] = []
 
   constructor() {
     for (let i = 0; i < 9; i++) {

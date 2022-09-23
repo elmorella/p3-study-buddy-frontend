@@ -6,14 +6,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/home/header/header.component';
 import { ButtonSetComponent } from './components/home/button-set/button-set.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ListCardComponent } from 'src/app/components/list-card/list-card.component';
+import { ListCardComponent } from './components/list-deck/list-card.component';
 import { ListNotesComponent } from 'src/app/components/list-notes/list-notes.component';
 
 const routes: Routes = [
-  { path: '', component: ListCardComponent },
+  { path: '', component: HomePageComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'card', component: CardComponent },
-  { path: 'cards', component: ListCardComponent },
+  { path: 'decks', component: ListCardComponent },
   { path: 'notes', component: ListNotesComponent }
 ]
 

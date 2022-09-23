@@ -1,0 +1,28 @@
+<div class="container text-center">
+    <div class="row">
+        <!-- <div class="col-sm-4" *ngFor="let item of items"> -->
+        <div class="col-sm-4" *ngFor="let card of cardSet">
+            <div class="panel panel-primary">
+                <div class="panel-title">
+                    <!-- <h2>{{item.name}}</h2> -->
+                    <p>{{card.title}}</p>
+                </div>
+                <div>
+                    <p>{{card.description}}</p>
+                    <!-- <a routerLink="{{ '/item/' + item.id }}">
+                        <img src={{item.imageUrl}} class="img-responsive" style="width:100%" alt="Image">
+                    </a> -->
+                </div>
+                <a routerLink="">
+                    <div class="panel-body">
+                        <!-- <h4>{{item.description}}</h4> -->
+                        <!-- Set Subject -->
+                    </div>
+                </a>
+                <div class="panel-footer">
+                    <!-- <h3>{{item.price|currency}}</h3> -->
+                    <!-- <button (click)="addToCart(item.id)" class="btn btn-primary btn-lg col-lg-5">Add to cart</button> -->
+                </div>
+            </div>
+        </div>
+    </div>

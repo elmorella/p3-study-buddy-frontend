@@ -1,0 +1,31 @@
+.col-lg-8 {
+    padding-left: 20px;
+}
+
+.panel {
+    margin: 30px;
+    border-style: solid;
+    border-radius: 12px;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+}
+
+.panel-title {
+    text-align:center;
+    height: 48px;
+    background-color: blue;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size:larger;
+}
+
+.panel-body {
+    height: 100px;
+}
+
+button{
+    max-width:80%; 
+    margin-left: 10%;
+}

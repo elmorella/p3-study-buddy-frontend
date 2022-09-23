@@ -4,12 +4,9 @@ import { CardComponent } from './components/card/card.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    component: HomePageComponent,    
-  },
-  {path:'card', 
-  component: CardComponent}
+  {path: 'home', component: HomePageComponent},
+  {path:'card', component: CardComponent},
+  {path:'', component: HomePageComponent}
 ];
 
 @NgModule({

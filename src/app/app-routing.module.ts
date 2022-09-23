@@ -8,13 +8,15 @@ import { ButtonSetComponent } from './components/home/button-set/button-set.comp
 import { FooterComponent } from './components/footer/footer.component';
 import { ListCardComponent } from './components/list-deck/list-card.component';
 import { ListNotesComponent } from 'src/app/components/list-notes/list-notes.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'card', component: CardComponent },
   { path: 'decks', component: ListCardComponent },
-  { path: 'notes', component: ListNotesComponent }
+  { path: 'notes', component: ListNotesComponent },
+  { path: 'carousel', component: CarouselComponent}
 ]
 
 @NgModule({
@@ -30,5 +32,6 @@ export const routingComponents = [
   FooterComponent,
   CardComponent,
   ListCardComponent,
-  ListNotesComponent
+  ListNotesComponent,
+  CarouselComponent
 ]

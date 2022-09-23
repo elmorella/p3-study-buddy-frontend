@@ -1,12 +1,21 @@
-<h1>Build Card Set</h1>
-<form class="cf">
-  <div class="half left cf">
-    <input type="text" id="input-name" placeholder="Name">
-    <input type="text" id="input-subject" placeholder="Subject">
+<h2 style="text-align: center; margin-top: 80px;">Add Notes</h2>
+<form class="card">
+  <div>
+    <span class="card-title">
+        <input type="text" id="input-name" placeholder="Title">
+    </span>
+    <span class="card-subtitle" style="margin: 36px;">
+        <input type="text" id="input-subject" placeholder="Subject">
+    </span>
   </div>
-  <div class="half right cf">
+  <div>
     <textarea name="description" type="text" id="description" placeholder="Description"></textarea>
   </div>  
-  <input type="submit" value="add Card" id="input-submit">
-  <input type="submit" value="save Set" id="input-submit">
+
+  <div>
+  <input class="button" type="submit" value="add Card" id="card-title" style="left: 60%">
+  
+</div>
 </form>
+<input class="button" type="submit" value="save Set" id="input-submit" style="margin-left: 700px;">
+

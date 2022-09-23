@@ -1,0 +1,43 @@
+div{
+}
+
+span{
+    width: 500px;
+}
+
+input {
+    position: relative;
+    left: 33%;
+    height: 50px;
+    width: 250px;
+    border-radius: 6px;
+    color: #3A405A;
+}
+
+textarea{
+    position: relative;
+    left: 40%;
+    height: 150px; 
+    width: 250px;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+.button{
+    position: relative;
+    left: 32%;
+    margin: 20px;
+    height: 50px; 
+    width: 250px;
+    
+}
+
+.card{
+    width: 500px;
+    align-self: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: #3A405A;
+}
+

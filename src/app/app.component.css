@@ -5,3 +5,45 @@
     width: 100vw;
     background-color: rgb(228, 242, 249);
   } */
+
+  .card{
+    margin-bottom: 30px;
+    box-shadow: -10px -10px 15px #C1D9C1;
+   }
+   .card-title{
+    text-align: center;
+    color: #3A405A;
+   }
+   .card-subtitle{
+    color: #3A405A;
+   }
+   h1{
+    font-family: sirenia, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 95px;
+   }
+   h2{
+    font-family: sirenia, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 75px;
+   }
+   h3{
+    font-family: sirenia, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
+   }
+   p{
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+   }
+   a{
+    color: #EA526F;
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+   }

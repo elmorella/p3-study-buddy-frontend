@@ -1,18 +1,18 @@
 <div class="container">
-    <div [ngClass]="toggleProperty ? 'flipped' : ''" class="card">
-      <div class="front">
-        <h3>Word</h3>
-        <ng-content select="card-front"></ng-content>
-        <div class="arrow-icon" (click)="toggle()">
-          <i class="ion-ios-arrow-back"></i>
-        </div>
+  <div [ngClass]="toggleProperty ? 'flipped' : ''" class="card">
+    <div class="front">
+      <h2>Word</h2>
+      <ng-content select="card-front"></ng-content>
+      <div class="arrow-icon" (click)="toggle()">
+        <i class="ion-ios-arrow-back"></i>
       </div>
-      <div class="back">
-        <p>Definition</p>
-        <ng-content select="card-back"></ng-content>
-        <div class="arrow-icon" (click)="toggle()">
-          <i class="ion-ios-arrow-back"></i>
-        </div>
+    </div>
+    <div class="back">
+      <p>Definition</p>
+      <ng-content select="card-back"></ng-content>
+      <div class="arrow-icon" (click)="toggle()">
+        <i class="ion-ios-arrow-back"></i>
       </div>
     </div>
   </div>
+</div>

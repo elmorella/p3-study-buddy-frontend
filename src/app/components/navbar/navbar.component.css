@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/tcb3opd.css");
+
 .navbar {
     background: hsla(333, 69%, 97%, 1);
     background: linear-gradient(315deg, hsla(333, 69%, 97%, 1) 31%, hsla(349, 78%, 62%, 1) 96%);
@@ -11,10 +13,16 @@
 }
 
 .nav-link{
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     color: #3A405A;
 }
 
 .navbar-brand{
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     color: #839073;
 }
 

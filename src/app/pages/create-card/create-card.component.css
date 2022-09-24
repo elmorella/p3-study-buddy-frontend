@@ -1,48 +1,47 @@
-div{
-}
-
 span{
     width: 500px;
 }
 
 input {
     position: relative;
+    left: 33%;
     height: 50px;
     width: 250px;
-    padding: 10px;
-    border-width: 1px;
+    color: #3A405A;
     border-radius: 5px 10px 7px;
-    font-family: itc-avant-garde-gothic-pro, sans-serif
+    border-width: 1px;
 }
 
 textarea{
     position: relative;
-    height: 150px; 
-    width: 100%;
+    left: 33%;
+    height: 50px; 
+    width: 250px;
+    color: #3A405A;
+    border-radius: 5px 10px 7px;
     border-width: 1px;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    font-family: itc-avant-garde-gothic-pro, sans-serif
 }
 
 .button{
     position: relative;
-    margin: 10px;
+    left: 33%;
     height: 50px; 
     width: 250px;
-    border-radius: 6px;
-    font-family: itc-avant-garde-gothic-pro, sans-serif
+    
 }
 
 .card{
-    width: 550px;
-    position: relative;
-    left: 32%;
-    padding: 6px;
+    width: 100%;
+    align-self: center;
     box-shadow: -10px -10px 15px #C1D9C1;
     box-sizing: border-box;
-    border-radius: 6px;
+    border-radius: 5px 10px 7px;
+    border-width: 1px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 25px;
 }
 

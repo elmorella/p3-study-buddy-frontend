@@ -1,20 +1,27 @@
-<h2 style="text-align: center; margin-top: 80px;">Add Notes</h2>
-<form class="card">
-  <div>
-    <span class="card-title">
-        <input type="text" placeholder="Title">
-    </span>
-    <span class="card-subtitle" style="margin-left: 36px;">
-        <input type="text" placeholder="Subject">
-    </span>
-  </div>
-  <div>
-    <textarea name="description" type="text" placeholder="Description"></textarea>
-  </div>  
+<h2 style="text-align: center; margin-top: 80px;">Add Decks</h2>
+<div class="container">
+  <div *ngFor="let deck of deckList" class="card">
+    <div class="card-title">
+      {{deck.title}}
+</div>
+<div>
+  {{deck.description}}
+</div> 
 
-  <div>
-  <input class="button" type="submit" value="add Card" style="left: 51%;">
+  </div>
+  <form (submit)="addDecktoList(addCard)" #addCard="ngForm">
+  <div class="card">
+    <div class="card-title">
+          <input name="title" class="form-control" type="text" placeholder="Title" ngModel>
+    </div>
+    <div>
+      <textarea class="form-control" name="description" type="text" placeholder="Description" 
+        ngModel></textarea>
+    </div>  
+    <div>
+    <input class="button" type="submit" value="add Card Deck">
+    </div>
   </div>
 </form>
-<input class="button" type="submit" value="save Set" style="left: 75%; margin-bottom: 62px;">
+</div>
 

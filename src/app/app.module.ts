@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,7 +9,6 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HeaderComponent } from './components/home/header/header.component';
 import { ButtonSetComponent } from './components/home/button-set/button-set.component';
 import { FooterComponent } from './components/footer/footer.component';
-
 
 import { routingComponents } from './app-routing.module';
 import { CreateCardComponent } from './pages/create-card/create-card.component';
@@ -35,6 +35,7 @@ import { HomeComponent } from './components/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
     
   ],
   providers: [],

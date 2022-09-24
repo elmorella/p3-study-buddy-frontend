@@ -5,4 +5,15 @@
     border-bottom-color: #7CAE7A;
     margin-bottom: 50px;
     color: #3A405A;
+    display: flex;
+}
+
+/* .carousel {
+    width: 1000px;
+    height: 590px;
+} */
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
 }

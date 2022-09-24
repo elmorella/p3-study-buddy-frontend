@@ -1,0 +1,44 @@
+.container{
+    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 0%;
+    margin-right: 0%;
+    flex-grow: 1;
+}
+
+.box{
+    margin-top: 60px;
+    color: #3A405A;
+}
+
+/* .row{
+    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-evenly;
+} */
+
+.card{
+    background-color: #FEFBFD;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-bottom: 30px;
+    box-shadow: -10px -10px 15px #C1D9C1;
+}
+    
+.card-title{
+    text-align: center;
+    color: #3A405A;
+    
+}
+    
+.card-subtitle{
+    color: #3A405A;
+}

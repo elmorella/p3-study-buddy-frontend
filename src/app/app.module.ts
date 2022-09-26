@@ -10,6 +10,7 @@ import { SearchCardsComponent } from './components/search-cards/search-cards.com
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { TimerComponent } from './components/timer/timer.component';
 
 
 
@@ -19,7 +20,8 @@ import {HttpClientModule} from '@angular/common/http';
     routingComponents,
     TestComponent,
     SearchCardsComponent,
-    routingComponents
+    routingComponents,
+    TimerComponent
   
   ],
   imports: [

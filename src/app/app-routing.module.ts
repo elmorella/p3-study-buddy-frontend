@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'decks', component: ListCardComponent },
   { path: 'notes', component: ListNotesComponent },
   { path: 'search', component: TestComponent},
+  { path: 'search/:name', component: TestComponent},
   { path: 'note-view', component: NoteViewComponent },
   { path: 'carousel', component: CarouselComponent}
 ]

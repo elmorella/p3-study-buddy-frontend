@@ -17,6 +17,7 @@ import { ListCardsComponent } from './pages/list-cards/list-cards.component';
 import { ListNotesComponent } from './pages/list-notes/list-notes.component';
 import { HomeComponent } from './components/home/home.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

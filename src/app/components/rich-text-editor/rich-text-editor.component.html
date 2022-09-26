@@ -1,0 +1,14 @@
+<div class="topDecorator"></div>
+<div class="container">
+    <ckeditor id="ckeditor"
+    [(ngModel)]="ckeditorContent">
+      <ckbutton id="ckbutton"
+        [name]="'saveButton'"
+        [command]="'saveCmd'"
+        (click)="saveNewNote()"
+        [icon]="'save.png'"
+        [label]="'Save Document'"
+        [toolbar]="'clipboard,1'">
+      </ckbutton>
+  </ckeditor>
+</div>

@@ -1,0 +1,10 @@
+@media screen and (min-width:720px) {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.decorativeBox {
+    padding: 10%;
+}

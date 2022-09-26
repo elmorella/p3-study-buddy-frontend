@@ -12,12 +12,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     TestComponent,
-    SearchCardsComponent
+    SearchCardsComponent,
+    routingComponents
+  
   ],
   imports: [
     BrowserModule,

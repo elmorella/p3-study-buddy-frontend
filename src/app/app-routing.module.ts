@@ -10,6 +10,8 @@ import { ListCardComponent } from './components/list-deck/list-card.component';
 import { ListNotesComponent } from 'src/app/components/list-notes/list-notes.component';
 import { SearchCardsComponent } from './components/search-cards/search-cards.component';
 import { TestComponent } from './pages/test/test.component';
+import { NoteViewComponent } from './components/note-view/note-view.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -17,7 +19,9 @@ const routes: Routes = [
   { path: 'card', component: CardComponent },
   { path: 'decks', component: ListCardComponent },
   { path: 'notes', component: ListNotesComponent },
-  { path: 'search', component: TestComponent}
+  { path: 'search', component: TestComponent},
+  { path: 'note-view', component: NoteViewComponent },
+  { path: 'carousel', component: CarouselComponent}
 ]
 
 @NgModule({
@@ -33,5 +37,7 @@ export const routingComponents = [
   FooterComponent,
   CardComponent,
   ListCardComponent,
-  ListNotesComponent
+  ListNotesComponent,
+  NoteViewComponent,
+  CarouselComponent
 ]

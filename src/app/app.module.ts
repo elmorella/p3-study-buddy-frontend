@@ -16,7 +16,13 @@ import { CreateNotesComponent } from './pages/create-notes/create-notes.componen
 import { ListCardsComponent } from './pages/list-cards/list-cards.component';
 import { ListNotesComponent } from './pages/list-notes/list-notes.component';
 import { HomeComponent } from './components/home/home.component';
-
+import { CKEditorModule } from 'ng2-ckeditor';
+import { CreateNotesComponent } from './components/create-notes/create-notes.component';
+import { RichTextEditorComponent } from './components/rich-text-editor/rich-text-editor.component';
+import { NoteCardRelationComponent } from './components/note-card-relation/note-card-relation.component';
+import {MatButtonModule} from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -26,8 +32,10 @@ import { HomeComponent } from './components/home/home.component';
     HeaderComponent,
     ButtonSetComponent,
     FooterComponent,
-    routingComponents,
-    CreateCardComponent,
+    routingComponents,,
+    CreateNotesComponent,
+    RichTextEditorComponent,
+    NoteCardRelationComponentCreateCardComponent,
     CreateNotesComponent,
     ListCardsComponent,
     ListNotesComponent,
@@ -36,7 +44,11 @@ import { HomeComponent } from './components/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    CKEditorModule,
+    FormsModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

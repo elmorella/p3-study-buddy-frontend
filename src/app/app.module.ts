@@ -37,7 +37,6 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

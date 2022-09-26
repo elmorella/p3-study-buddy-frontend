@@ -1,29 +1,24 @@
-.card{
-    
-    /* border-width: 3px; */
-    /* border-color: #839073; */
-    margin-bottom: 30px;
+.container{
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
     box-shadow: 5px 5px 5px #C1D9C1;
-    padding-top: 30px;
     border-radius: 25px;
     width: 75%;
+    margin-top: -100px;
+    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 30px;
+    overflow-x: scroll;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
 }
 
-.card-title{
-    text-align: center;
-    color: #3A405A;
-}
 
-.card-subtitle{
-    color: #3A405A;
-}
-
-img{
+/* img{
     max-width: 50px;
-    /* height: 75%; */
-}
+} */
 
 .group{
     margin-left: 30px;

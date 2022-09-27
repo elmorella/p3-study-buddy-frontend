@@ -5,6 +5,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoteService } from './services/note.service';
 import { CardService } from './services/card.service';
+import { DeckService } from './services/deck.service';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { CardService } from './services/card.service';
     AppRoutingModule,
 
   ],
-  providers: [CardService, NoteService],
+  providers: [CardService,DeckService, NoteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

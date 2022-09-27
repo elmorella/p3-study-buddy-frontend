@@ -14,14 +14,7 @@ export class CardComponent implements OnInit {
   @Input() cardId: number = 0
   toggleProperty = false;
 
-  constructor(private activatedRoute: ActivatedRoute, private cardService: CardService) { 
-    // let cardId: number = parseInt(this.activatedRoute.snapshot.paramMap.get('cardId')!)
-    // this.card = cardService.getCardById(this.cardId)
-    // console.log('CARD COMPONENET: cardId: ' + this.card.cardId)
-    // console.log('cardTitle: ' + this.card.title)
-    // console.log('cardDescription: ' + this.card.description)
-    
-  }
+  constructor(private activatedRoute: ActivatedRoute, private cardService: CardService) {}
 
   ngOnInit(): void {
     console.log('CARD COMPONENET: cardId: ' + this.card.cardId)

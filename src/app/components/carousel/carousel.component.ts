@@ -3,8 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Card } from 'src/app/model/card.model';
 import { Deck } from 'src/app/model/deck.model';
 import { DeckService } from 'src/app/services/deck.service';
-import * as $ from "jquery";
-import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-carousel',
@@ -18,22 +16,15 @@ export class CarouselComponent implements OnInit {
   card: Card = new Card
 
   constructor(private activatedRoute: ActivatedRoute, private deckService: DeckService) {
-    console.log('carousel componenet')
-
     let deckId: number = parseInt(this.activatedRoute.snapshot.paramMap.get('deckId')!)
+
+    // TODO: insert database data
+    
     this.deck = deckService.getDeckById(deckId - 1)
     this.cards = this.deck.cardSet
     this.card = this.cards[2]
-    // console.log('deck: ' + this.deck.cardSet)
-    // console.log('deckId: ' + deckId)
-    // console.log('deck.deckId: ' + this.deck.deckId)
-    // console.log('Number of cards: ' + this.cards.length)
-    console.log('Cards array: ' + this.cards.length)
-    // console.log('First Card Title: ' + this.cards[2].title)
   }
 
-  // Attemp to fix carousel
-  selectedIndex = 0;
   selectedCard = 1;
 
   ngOnInit(): void {
@@ -60,8 +51,6 @@ export class CarouselComponent implements OnInit {
   }
 
   trackCard(index: number, card: Card) {
-    
     return card ? card.cardId : undefined;
-
   }
 }

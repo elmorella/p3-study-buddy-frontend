@@ -13,6 +13,8 @@ import { TestComponent } from './pages/test/test.component';
 import { NoteViewComponent } from './components/note-view/note-view.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CreateNotesComponent } from './components/create-notes/create-notes.component';
+import { NoteCardRelationComponent } from './components/note-card-relation/note-card-relation.component';
+import { RichTextEditorComponent } from 'src/app/components/rich-text-editor/rich-text-editor.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -46,5 +48,7 @@ export const routingComponents = [
   NoteViewComponent,
   CarouselComponent,
   SearchCardsComponent,
-  CreateNotesComponent
+  CreateNotesComponent,
+  NoteCardRelationComponent,
+  RichTextEditorComponent
 ]

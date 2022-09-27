@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
     [config]="{uiColor: '#99000'}"
     [readonly]="false"
     (change)="onChange($event)"
-    (editorChange)="onEditorChange($event)" <!-- CKEditor change event -->
+    (editorChange)="onEditorChange($event)" 
+    <!-- CKEditor change event -->
     (ready)="onReady($event)"
     (focus)="onFocus($event)"
     (blur)="onBlur($event)"

@@ -3,12 +3,16 @@
 }
 
 .content{
-    background-color: #3A405A;
+    background: hsla(320, 60%, 99%, 1);
+    background: linear-gradient(270deg, hsla(320, 60%, 99%, 1) 15%, hsla(231, 18%, 86%, 1) 100%);
+    background: -moz-linear-gradient(270deg, hsla(320, 60%, 99%, 1) 15%, hsla(231, 18%, 86%, 1) 100%);
+    background: -webkit-linear-gradient(270deg, hsla(320, 60%, 99%, 1) 15%, hsla(231, 18%, 86%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FEFBFD", endColorstr="#D4D6E1", GradientType=1 );
+
     width: 550px;
     height: auto;
     border-radius: 10px;
 
-    
 }
 
 .content-timer{
@@ -21,23 +25,23 @@
 .content-m,
 .content-s{
     width: auto;
-    height: 100px;
+    height: auto;
 }
 
 .time{
-    font-family: itc-avant-garde-gothic-pro, sans-serif;
-    font-weight: 500;
+    font-family: sirenia, sans-serif;
+    font-weight: 400;
     font-style: normal;
-    color: #FEFBFD; 
+    color: #3A405A; 
     text-align: center;
-    font-size: 60px;
+    font-size: 95px;
 }
 
 .letter{
-    /* font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
     font-weight: 500;
-    font-style: normal; */
-    color: #FEFBFD;
+    font-style: normal;
+    color: #3A405A;
     font-size: 20px;
 }
 
@@ -47,7 +51,7 @@
 }
 
 .content-btn > button{
-    font-size: xx-large;
+    font-size: x-large;
     width: 50px;
     margin-right: 15px;
     
@@ -69,12 +73,12 @@
     display: flex;
     justify-content: center;
     margin-top: 15px;
-    padding-top: 40px;
+    /* padding-top: 40px; */
     padding-bottom: 40px;
 }
 
 .content-btn-action > button{
-    font-size: xx-large;
+    font-size: x-large;
     width: 50px;
     margin-right: 15px;
     border-radius: 5px;

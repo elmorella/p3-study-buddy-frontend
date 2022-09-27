@@ -25,7 +25,8 @@ import { MatIconModule } from '@angular/material/icon'
     CKEditorModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    BrowserAnimationsModule
 
   ],
   providers: [CardService,DeckService, NoteService],

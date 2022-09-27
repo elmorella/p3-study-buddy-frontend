@@ -1,0 +1,36 @@
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-wrap="true" data-keyboard="true"
+        data-touch="true">
+
+        <!-- The slideshow -->
+        <div *ngFor="let card of cards; let i = index" class="carousel-inner">
+            <div *ngIf="card.cardId === selectedCard; then thenBlock else elseBlock"></div>
+            <ng-template #thenBlock>
+                <div class="carousel-item active fade">
+                    <app-card [card]='card'></app-card>
+                </div>
+            </ng-template>
+            <ng-template #elseBlock>
+                <div class="carousel-item fade">
+                    <app-card [card]='card'></app-card>
+                </div>
+            </ng-template>
+        </div>
+
+        <!-- Indicators -->
+        <div class="carousel-dot-container">
+            <span *ngFor="let dot of cards; let i = index" class="dot" [ngClass]="{'active': selectedCard === i+1}"
+                (click)="selectCard(i+1)">
+            </span>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="next" (click)="onPrevClick()">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next" (click)="onNextClick()">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+<router-outlet></router-outlet>

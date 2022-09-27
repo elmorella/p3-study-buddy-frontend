@@ -19,6 +19,7 @@ h2{
     font-weight: 300;
     font-style: normal;
     font-size: 75px;
+    /* color: #3A405A; */
 }
 
 h3{
@@ -48,3 +49,6 @@ a{
   padding: 0;
   font-family: sans-serif;
 } */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

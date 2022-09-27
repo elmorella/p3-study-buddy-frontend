@@ -1,11 +1,11 @@
 @import url("https://use.typekit.net/tcb3opd.css");
 
 .navbar {
-    background: hsla(333, 69%, 97%, 1);
-    background: linear-gradient(315deg, hsla(333, 69%, 97%, 1) 31%, hsla(349, 78%, 62%, 1) 96%);
-    background: -moz-linear-gradient(315deg, hsla(333, 69%, 97%, 1) 31%, hsla(349, 78%, 62%, 1) 96%);
-    background: -webkit-linear-gradient(315deg, hsla(333, 69%, 97%, 1) 31%, hsla(349, 78%, 62%, 1) 96%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FDF4F8", endColorstr="#EA526F", GradientType=1 );
+    background: hsla(320, 60%, 99%, 1);
+    background: linear-gradient(315deg, hsla(320, 60%, 99%, 1) 38%, hsla(229, 22%, 29%, 1) 97%);
+    background: -moz-linear-gradient(315deg, hsla(320, 60%, 99%, 1) 38%, hsla(229, 22%, 29%, 1) 97%);
+    background: -webkit-linear-gradient(315deg, hsla(320, 60%, 99%, 1) 38%, hsla(229, 22%, 29%, 1) 97%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FEFBFD", endColorstr="#3A405A", GradientType=1 );
 
     /* border-bottom-style: solid; */
     border-bottom-width: 2px;

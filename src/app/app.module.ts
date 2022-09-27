@@ -3,10 +3,13 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NoteService } from './services/note.service';
+import { CardService } from './services/card.service';
+import { DeckService } from './services/deck.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
-import { MatIconModule } from '@angular/material/icon';
-import { ButtonSetComponent } from './components/home/button-set/button-set.component';
+import { CKEditorModule } from 'ng2-ckeditor'
+import { MatIconModule } from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -16,12 +19,14 @@ import { ButtonSetComponent } from './components/home/button-set/button-set.comp
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    MatButtonModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatButtonModule,
+    CKEditorModule,
+    FormsModule,
+    MatIconModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [CardService,DeckService, NoteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

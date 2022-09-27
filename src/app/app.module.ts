@@ -5,7 +5,6 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoteService } from './services/note.service';
 import { CardService } from './services/card.service';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -17,7 +16,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
 
   ],
   providers: [CardService, NoteService],

@@ -14,7 +14,7 @@ export class SearchCardsComponent implements OnInit {
   name:string =  '';
   
   constructor(private deckService: DeckService, private route:ActivatedRoute) { 
-    this.decks = this.deckService.getAllDecks()
+    // this.decks = this.deckService.getAllDecks()
   }
 
   ngOnInit(): void {

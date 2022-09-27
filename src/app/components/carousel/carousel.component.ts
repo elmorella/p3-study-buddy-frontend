@@ -1,8 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input ,OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Card } from 'src/app/model/card.model';
 import { Deck } from 'src/app/model/deck.model';
-import { DeckService } from 'src/app/services/deck.service';
+import { CardService } from 'src/app/services/card.service';
 
 @Component({
   selector: 'app-carousel',
@@ -11,23 +12,25 @@ import { DeckService } from 'src/app/services/deck.service';
 })
 export class CarouselComponent implements OnInit {
 
+  deckId: number = 0
   deck: Deck = new Deck
   cards: Card[] = []
   card: Card = new Card
 
-  constructor(private activatedRoute: ActivatedRoute, private deckService: DeckService) {
-    let deckId: number = parseInt(this.activatedRoute.snapshot.paramMap.get('deckId')!)
-
-    // TODO: insert database data
-    
-    this.deck = deckService.getDeckById(deckId - 1)
-    this.cards = this.deck.cardSet
-    this.card = this.cards[2]
+  constructor(private http: HttpClient, private activatedRoute: ActivatedRoute, private cardService: CardService) {
+    this.deckId = parseInt(this.activatedRoute.snapshot.paramMap.get('deckId')!)
+    console.log("deck id passed from deck list " + this.deckId)
   }
 
   selectedCard = 1;
 
   ngOnInit(): void {
+    this.cardService.getCardsByDeckId(this.deckId).subscribe(
+      (cards: Card[]) => {
+      this.cards = cards
+    })
+
+    console.log("length of array returned " + this.cards.length)
   }
 
   selectCard(index: number) {

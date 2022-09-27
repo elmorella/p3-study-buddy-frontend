@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'notes', component: ListNotesComponent },
   { path: 'search', component: TestComponent},
   { path: 'search/:name', component: TestComponent},
-  { path: 'note-view', component: NoteViewComponent },
+  { path: 'note-view/:noteId', component: NoteViewComponent },
   { path: 'carousel/:deckId', component: CarouselComponent},
   { path: 'create-notes', component: CreateNotesComponent},
   { path: '**', component: HomePageComponent}

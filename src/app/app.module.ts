@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { CKEditorModule } from 'ng2-ckeditor'
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,9 +27,10 @@ import { MatIconModule } from '@angular/material/icon'
     CKEditorModule,
     FormsModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [CardService,DeckService, NoteService],
+  providers: [CardService, DeckService, NoteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

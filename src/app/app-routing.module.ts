@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'search', component: TestComponent},
   { path: 'search/:name', component: TestComponent},
   { path: 'note-view', component: NoteViewComponent },
-  { path: 'carousel/:deckId', component: CarouselComponent}
+  { path: 'carousel/:deckId', component: CarouselComponent},
+  { path: '**', component: HeaderComponent}
 ]
 
 @NgModule({

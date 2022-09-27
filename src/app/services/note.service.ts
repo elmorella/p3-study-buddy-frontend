@@ -6,7 +6,7 @@ import { Note } from '../model/note.model';
 })
 export class NoteService {
   notes: Note[] = []
-
+  queryNotes: Note[] = []
   constructor() {
 
     for (let i = 0; i < 9; i++) {
@@ -20,5 +20,9 @@ export class NoteService {
 
   getAllNotes() {
     return this.notes
+  }
+
+  getNoteByQuery(){
+    return 
   }
 }

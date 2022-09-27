@@ -13,6 +13,7 @@ export class ListCardComponent implements OnInit {
 
   constructor(private deckService: DeckService) { 
     this.decks = this.deckService.getAllDecks()
+    // console.log(this.decks)
   }
 
   ngOnInit(): void {

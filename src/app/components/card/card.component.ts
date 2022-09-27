@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CardService } from 'src/app/services/card.service';
+import { Card } from 'src/app/model/card.model';
 
 @Component({
   selector: 'app-card',
@@ -6,11 +9,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
+  @Input() card: Card = new Card;
+  // card: Card = new Card
+  @Input() cardId: number = 0
   toggleProperty = false;
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute, private cardService: CardService) { 
+    // let cardId: number = parseInt(this.activatedRoute.snapshot.paramMap.get('cardId')!)
+    // this.card = cardService.getCardById(this.cardId)
+    // console.log('CARD COMPONENET: cardId: ' + this.card.cardId)
+    // console.log('cardTitle: ' + this.card.title)
+    // console.log('cardDescription: ' + this.card.description)
+    
+  }
 
   ngOnInit(): void {
+    console.log('CARD COMPONENET: cardId: ' + this.card.cardId)
   }
 
   toggle(){

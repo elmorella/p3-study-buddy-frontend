@@ -5,19 +5,22 @@ import { Card } from '../model/card.model';
   providedIn: 'root'
 })
 export class CardService {
-  cardSet: Card[] = []
+
+  card: Card = new Card
 
   constructor() {
-    for (let i = 0; i < 9; i++) {
-      let card = new Card()
-      card.cardId = i
-      card.title = "Title of Card #" + i
-      card.description = "Subject #" + i
-      this.cardSet.push(card)
-    }
+    this.card.cardId = 25
+    this.card.title = "what is the answer to life the universe and everything?"
+    this.card.description = "42"
+  }
+
+  getCardById(cardId: number) {
+    this.card.cardId = cardId
+    this.card.title = "This card id is: " + cardId
+    return this.card
   }
 
   getCardSet() {
-    return this.cardSet
+    return this.card
   }
 }

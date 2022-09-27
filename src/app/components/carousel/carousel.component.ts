@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input ,OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Card } from 'src/app/model/card.model';
+import { Deck } from 'src/app/model/deck.model';
+import { DeckService } from 'src/app/services/deck.service';
+import * as $ from "jquery";
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-carousel',
@@ -7,9 +13,55 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
 
-  constructor() { }
+  deck: Deck = new Deck
+  cards: Card[] = []
+  card: Card = new Card
+
+  constructor(private activatedRoute: ActivatedRoute, private deckService: DeckService) {
+    console.log('carousel componenet')
+
+    let deckId: number = parseInt(this.activatedRoute.snapshot.paramMap.get('deckId')!)
+    this.deck = deckService.getDeckById(deckId - 1)
+    this.cards = this.deck.cardSet
+    this.card = this.cards[2]
+    // console.log('deck: ' + this.deck.cardSet)
+    // console.log('deckId: ' + deckId)
+    // console.log('deck.deckId: ' + this.deck.deckId)
+    // console.log('Number of cards: ' + this.cards.length)
+    console.log('Cards array: ' + this.cards.length)
+    // console.log('First Card Title: ' + this.cards[2].title)
+  }
+
+  // Attemp to fix carousel
+  selectedIndex = 0;
+  selectedCard = 1;
 
   ngOnInit(): void {
   }
 
+  selectCard(index: number) {
+    this.selectedCard = index;
+  }
+
+  onPrevClick() {
+    if(this.selectedCard === 1) {
+      this.selectedCard = this.cards.length;
+    } else {
+      this.selectedCard--;
+    }
+  }
+
+  onNextClick() {
+    if(this.selectedCard === this.cards.length) {
+      this.selectedCard = 1;
+    } else {
+      this.selectedCard++;
+    }
+  }
+
+  trackCard(index: number, card: Card) {
+    
+    return card ? card.cardId : undefined;
+
+  }
 }

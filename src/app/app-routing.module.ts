@@ -14,11 +14,11 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'home', component: HomePageComponent },
-  { path: 'card', component: CardComponent },
+  { path: 'card/:cardId', component: CardComponent },
   { path: 'decks', component: ListCardComponent },
   { path: 'notes', component: ListNotesComponent },
   { path: 'note-view', component: NoteViewComponent },
-  { path: 'carousel', component: CarouselComponent}
+  { path: 'carousel/:deckId', component: CarouselComponent}
 ]
 
 @NgModule({

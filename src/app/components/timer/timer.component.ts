@@ -92,6 +92,12 @@ export class TimerComponent implements OnInit {
       this.disabled = true;
       this.show = false;
       this.updateTimer();
+
+      if(this.seconds > 0){
+        this.timer = setInterval(() =>{
+          this.updateTimer();
+        }, 1000);
+      }
     }
   }
 

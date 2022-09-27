@@ -11,6 +11,8 @@ import { SearchCardsComponent } from './components/search-cards/search-cards.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { TimerComponent } from './components/timer/timer.component';
+import { CssTestComponent } from './components/css-test/css-test.component';
+
 
 
 
@@ -21,7 +23,9 @@ import { TimerComponent } from './components/timer/timer.component';
     TestComponent,
     SearchCardsComponent,
     routingComponents,
-    TimerComponent
+    TimerComponent,
+    CssTestComponent,
+    
   
   ],
   imports: [

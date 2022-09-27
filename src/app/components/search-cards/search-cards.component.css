@@ -57,3 +57,34 @@ hr{
     text-align: left;
     color: #3A405A;
 }
+
+.circle{
+    /* padding-top: -100px; */
+    height: 40px;
+    width: 40px;
+    margin-left: 130px;
+    border-radius: 50px;
+    border: #FEFBFD;
+    border-style: solid;
+    background-color: #839073;
+    color: #FEFBFD;
+    font-size: xx-large;
+    text-align: center;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: column;
+    /* padding-right: 8px; */
+    /* position: relative; */
+}
+
+.circle > img{
+    display: float;
+    padding-left: 6px;
+}
+
+.circle:hover{
+    transition: 0.5s;
+    transform: scale(0.8);
+    cursor: pointer;
+    /* justify-content: center; */
+}

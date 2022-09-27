@@ -6,12 +6,12 @@
         <div *ngFor="let card of cards; let i = index" class="carousel-inner">
             <div *ngIf="card.cardId === selectedCard; then thenBlock else elseBlock"></div>
             <ng-template #thenBlock>
-                <div class="carousel-item active">
+                <div class="carousel-item active fade">
                     <app-card [card]='card'></app-card>
                 </div>
             </ng-template>
             <ng-template #elseBlock>
-                <div class="carousel-item">
+                <div class="carousel-item fade">
                     <app-card [card]='card'></app-card>
                 </div>
             </ng-template>

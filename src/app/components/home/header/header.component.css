@@ -3,6 +3,17 @@
     /* box-shadow: -10px 10px 20px #7CAE7A; */
     border-bottom-style: solid;
     border-bottom-color: #7CAE7A;
+    display: flex;
+    justify-content: space-around;
     margin-bottom: 50px;
     color: #3A405A;
+    
+}
+
+.carousel{
+    max-width: 45%;
+}
+
+.carousel-inner img {
+    max-width: 100%;
 }

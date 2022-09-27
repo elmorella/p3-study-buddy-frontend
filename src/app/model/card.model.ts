@@ -1,5 +1,5 @@
 export class Card {
-    cardId?: number
+    cardId: number = 0
     title?: String
     description?: String
 }

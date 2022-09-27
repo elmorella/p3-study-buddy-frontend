@@ -40,5 +40,6 @@ export const routingComponents = [
   ListCardComponent,
   ListNotesComponent,
   NoteViewComponent,
-  CarouselComponent
+  CarouselComponent,
+  SearchCardsComponent
 ]

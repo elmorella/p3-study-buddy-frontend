@@ -26,13 +26,8 @@ const routes: Routes = [
   { path: 'search/:name', component: TestComponent},
   { path: 'note-view', component: NoteViewComponent },
   { path: 'carousel/:deckId', component: CarouselComponent},
-<<<<<<< HEAD
-  { path: '**', component: HeaderComponent}
-=======
   { path: 'create-notes', component: CreateNotesComponent},
   { path: '**', component: HomePageComponent}
-
->>>>>>> feature-merge
 ]
 
 @NgModule({

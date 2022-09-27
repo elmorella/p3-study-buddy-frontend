@@ -16,7 +16,7 @@ import { CreateNotesComponent } from './components/create-notes/create-notes.com
 const routes: Routes = [
   {path: 'home', component: HomePageComponent},
   {path:'card', component: CardComponent},
-  {path: "createCard", component: CreateCardComponent},
+  {path: 'createCard', component: CreateCardComponent},
   { path: 'note-view', component: NoteViewComponent },
   { path: 'carousel', component: CarouselComponent},
   { path: 'create-notes', component: CreateNotesComponent},

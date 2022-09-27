@@ -10,22 +10,31 @@ import { Deck } from 'src/app/model/deck.model';
 })
 export class CreateCardComponent implements OnInit {
   deckList: Deck[]=[];
-  cardList: Array<Card> = [];
+  selectedDeck: Deck = new Deck();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  addCardtoSet(forms:any){
-
+  openDeck(number:any){
+    
   }
+
+  addCardtoSet(forms:any){
+    let card = new Card();
+    card.title = forms.value.word;
+    card.description = forms.value.description;
+    this.selectedDeck.cardSet.push(card);
+  }
+
   addDecktoList(forms:any){
     if (!forms.value.title || !forms.value.description){
 
     }
     else{
       let tempDeck = new Deck();
+      tempDeck.deckId = this.deckList.length -1;
       tempDeck.title = forms.value.title;
       tempDeck.description = forms.value.description;
       this.deckList.push(tempDeck);

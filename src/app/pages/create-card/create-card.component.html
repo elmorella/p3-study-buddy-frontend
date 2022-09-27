@@ -4,19 +4,20 @@
   
 <h2 style="text-align: center; margin-top: 30px; margin-bottom: 30px;">Create a Card Deck</h2>
 <div class="container">
-  <span *ngIf="deckList.length == 1">
-    <div *ngFor="let deck of deckList" class="card">
+  <span *ngIf="deckList.length == 1; else displayCards">
+    <div *ngFor="let deck of deckList; let deckId = index;" class="card">
       <div class="card-title">
         {{deck.title}}
       </div>
       <div>
         {{deck.description}}
       </div>
-    </div>
+    <!-- <button (click)="openDeck(deckId)">Open Deck</button> -->
+   </div>
   </span>
 
-  <ng-template #elseBlock>
-    <div *ngFor="let card of cardList" class="card">
+  <ng-template #displayCards>
+    <div *ngFor="let card of selectedDeck.cardSet" class="card">
       <div class="card-title">
         {{card.title}}
       </div>
@@ -26,15 +27,15 @@
     </div>
   </ng-template>
 
-  <span *ngIf="deckList.length == 0">
-    <form class="needs-validated" (submit)="addDecktoList(addCard)" #addCard="ngForm" novalidate>
+  <span *ngIf="deckList.length == 0; else cardForm">
+    <form class="needs-validated" (submit)="addDecktoList(addDeck)" #addDeck="ngForm" novalidate>
       <div class="card">
         <label id="frontLabel" for="front">Title</label>
         <input name="title" class="form-control" type="text" placeholder="Enter Title" ngModel required>
         <div class="invalid-feedback">Please choose a title.</div>
 
         <label for="front">Description</label>
-        <textarea class="form-control" name="description" type="text" required placeholder="Description" ngModel
+        <textarea class="form-control" name="description" type="text" placeholder="Description" ngModel
           required></textarea>
         <div class="invalid-feedback">Please write a Description.</div>
         <button class="button" type="submit"><span class="material-symbols-rounded">add_circle</span></button>
@@ -42,21 +43,18 @@
     </form>
   </span>
 
-  <ng-template #elseBlock>
-    <form class="needs-validated" (submit)="addDecktoList(addCard)" #addCard="ngForm" novalidate>
+  <ng-template #cardForm>
+    <form class="needs-validated" (submit)="addCardtoSet(addCard)" #addCard="ngForm" novalidate>
       <div class="card">
         <label id="frontLabel" for="front">Word</label>
-        <input name="title" class="form-control" type="text" placeholder="Enter Title" ngModel required>
+        <input name="word" class="form-control" type="text" placeholder="Enter Title" ngModel required>
         <div class="invalid-feedback">Please choose a Word.</div>
 
-        <label id="frontLabel" for="front">Definition</label>
-        <textarea class="form-control" name="description" type="text" required placeholder="Description" ngModel
+        <label id="frontLabel">Definition</label>
+        <textarea class="form-control" name="definition" type="text" placeholder="Description" ngModel
           required></textarea>
         <div class="invalid-feedback">Please write a Definition.</div>
-        <div>
-          <input class="button" type="submit" value="add Card Deck">
-          <button class="button" type="submit"><span class="material-symbols-rounded">add_circle</span> add Card Deck</button>
-        </div>
+          <button class="button" type="submit"><span class="material-symbols-rounded">add_circle</span></button>
       </div>
     </form>
   </ng-template>

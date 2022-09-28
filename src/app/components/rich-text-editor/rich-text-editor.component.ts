@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter,OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-rich-text-editor',
@@ -28,13 +28,14 @@ export class RichTextEditorComponent implements OnInit {
 
   constructor() { }
 
+  @Output()
+  emitter = new EventEmitter<string>();
   ckeditorContent: string = '<p>Note Details...</p>';
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  saveNewNote(){
-    
+  saveNewNote(event : any){
+    this.emitter.emit(this.ckeditorContent)
   }
 
 }

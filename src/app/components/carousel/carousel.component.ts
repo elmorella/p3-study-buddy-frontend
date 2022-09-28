@@ -15,22 +15,26 @@ export class CarouselComponent implements OnInit {
   deckId: number = 0
   deck: Deck = new Deck
   cards: Card[] = []
-  card: Card = new Card
+  // card: Card = new Card
 
   constructor(private http: HttpClient, private activatedRoute: ActivatedRoute, private cardService: CardService) {
     this.deckId = parseInt(this.activatedRoute.snapshot.paramMap.get('deckId')!)
     console.log("deck id passed from deck list " + this.deckId)
   }
 
-  selectedCard = 1;
+  selectedCard = 0;
 
   ngOnInit(): void {
     this.cardService.getCardsByDeckId(this.deckId).subscribe(
       (cards: Card[]) => {
       this.cards = cards
-    })
 
-    console.log("length of array returned " + this.cards.length)
+      // Reindex cards 
+      for(let i = 0; i < this.cards.length; i++){
+        cards[i].cardId = i
+        console.log(cards[i].cardId)
+      }
+    })
   }
 
   selectCard(index: number) {
@@ -38,16 +42,16 @@ export class CarouselComponent implements OnInit {
   }
 
   onPrevClick() {
-    if(this.selectedCard === 1) {
-      this.selectedCard = this.cards.length;
+    if(this.selectedCard === 0) {
+      this.selectedCard = this.cards.length-1;
     } else {
       this.selectedCard--;
     }
   }
 
   onNextClick() {
-    if(this.selectedCard === this.cards.length) {
-      this.selectedCard = 1;
+    if(this.selectedCard === this.cards.length-1) {
+      this.selectedCard = 0;
     } else {
       this.selectedCard++;
     }

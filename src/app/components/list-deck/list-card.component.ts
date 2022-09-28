@@ -19,6 +19,6 @@ export class ListCardComponent implements OnInit {
       (decks: Deck[]) => {
       this.decks = decks
     })
-    console.log(this.decks)
+    console.log("List Card Component: deck" + this.decks)
   }
 }

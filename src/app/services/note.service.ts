@@ -12,16 +12,7 @@ export class NoteService {
 
   notes: Note[] = []
   queryNotes: Note[] = []
-  constructor(private http: HttpClient) {
-
-    // for (let i = 0; i < 9; i++) {
-    //   let note = new Note()
-    //   note.noteId = i
-    //   note.title = "Title of Note #" + i
-    //   note.body = "Note #" + i
-    //   this.notes.push(note)
-    // }
-  }
+  constructor(private http: HttpClient) {}
 
   getAllNotes() : Observable<any[]> {
     return this.http.get<any[]>(`${this.BASE_URL}/note/all`);
@@ -35,5 +26,7 @@ export class NoteService {
     return this.http.get<any>(`${this.BASE_URL}/note/` + id)
   }
 
-
+  getCardsByQuery(query: String): Observable<Note[]> {
+    return this.http.get<Note[]>(`${this.BASE_URL}/note/search/` + query);
+  }
 }

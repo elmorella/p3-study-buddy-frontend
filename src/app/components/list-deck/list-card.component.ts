@@ -12,10 +12,13 @@ export class ListCardComponent implements OnInit {
   decks: Deck[] = []
 
   constructor(private deckService: DeckService) { 
-    this.decks = this.deckService.getAllDecks()
-    // console.log(this.decks)
   }
 
   ngOnInit(): void {
+    this.deckService.getAllDecks().subscribe(
+      (decks: Deck[]) => {
+      this.decks = decks
+    })
+    console.log("List Card Component: deck" + this.decks)
   }
 }

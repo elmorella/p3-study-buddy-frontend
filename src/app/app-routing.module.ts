@@ -23,7 +23,7 @@ const routes: Routes = [
   {path: 'createCard', component: CreateCardComponent},
   { path: 'search', component: TestComponent},
   { path: 'search/:name', component: TestComponent},
-  { path: 'note-view', component: NoteViewComponent },
+  { path: 'note-view/:noteId', component: NoteViewComponent },
   { path: 'carousel/:deckId', component: CarouselComponent},
   { path: 'create-notes', component: CreateNotesComponent},
   { path: '**', component: HomePageComponent}

@@ -1,9 +1,9 @@
 <div class="container">
     <div class="col-sm-4" *ngFor="let note of notes">
-        <div class="card btn" routerLink='/home' style="width: 18rem;">
+        <div class="card btn" routerLink='/note-view/{{note.noteId}}' style="width: 18rem;">
             <div class="card-body">
                 <h3 class="card-title">{{note.title}}</h3>
-                <p class="card-subtitle mb-2 ">{{note.body}}</p>
+                <p class="card-subtitle mb-2 ">ID: {{note.noteId}}</p>
                 <p class="card-text">Note
                 </p>
                 <!-- <a href="#" class="card-link">Card link</a> -->

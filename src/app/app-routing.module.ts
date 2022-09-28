@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateCardComponent } from './pages/create-card/create-card.component';
 import { CardComponent } from './components/card/card.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -17,14 +18,14 @@ import { NoteCardRelationComponent } from './components/note-card-relation/note-
 import { RichTextEditorComponent } from 'src/app/components/rich-text-editor/rich-text-editor.component';
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent },
-  { path: 'home', component: HomePageComponent },
-  { path: 'card/:cardId', component: CardComponent },
-  { path: 'decks', component: ListCardComponent },
-  { path: 'notes', component: ListNotesComponent },
+  { path: 'home', component: HomePageComponent},
+  { path: 'decks', component: ListCardComponent},
+  { path: 'notes', component: ListNotesComponent},
+  { path:'card/:cardId', component: CardComponent},
+  { path: 'createcard', component: CreateCardComponent},
   { path: 'search', component: TestComponent},
   { path: 'search/:name', component: TestComponent},
-  { path: 'note-view', component: NoteViewComponent },
+  { path: 'note-view/:noteId', component: NoteViewComponent },
   { path: 'carousel/:deckId', component: CarouselComponent},
   { path: 'create-notes', component: CreateNotesComponent},
   { path: '**', component: HomePageComponent}
@@ -36,6 +37,7 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponents = [
+  CreateCardComponent,
   HomePageComponent,
   NavbarComponent,
   HeaderComponent,

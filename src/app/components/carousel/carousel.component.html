@@ -19,8 +19,8 @@
 
         <!-- Indicators -->
         <div class="carousel-dot-container">
-            <span *ngFor="let dot of cards; let i = index" class="dot" [ngClass]="{'active': selectedCard === i+1}"
-                (click)="selectCard(i+1)">
+            <span *ngFor="let dot of cards; let i = index" class="dot" [ngClass]="{'active': selectedCard === i}"
+                (click)="selectCard(i)">
             </span>
         </div>
 

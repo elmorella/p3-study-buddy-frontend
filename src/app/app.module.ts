@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoteService } from './services/note.service';
@@ -9,14 +9,13 @@ import { DeckService } from './services/deck.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { CKEditorModule } from 'ng2-ckeditor'
-import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents
-    
   ],
   imports: [
     BrowserModule,
@@ -26,9 +25,10 @@ import { MatIconModule } from '@angular/material/icon'
     CKEditorModule,
     FormsModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [CardService,DeckService, NoteService],
+  providers: [CardService, DeckService, NoteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

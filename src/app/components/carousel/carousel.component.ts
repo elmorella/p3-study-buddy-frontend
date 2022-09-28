@@ -15,13 +15,12 @@ export class CarouselComponent implements OnInit {
   deckId: number = 0
   deck: Deck = new Deck
   cards: Card[] = []
-  // card: Card = new Card
 
   constructor(private http: HttpClient, private activatedRoute: ActivatedRoute, private cardService: CardService) {
     this.deckId = parseInt(this.activatedRoute.snapshot.paramMap.get('deckId')!)
-    console.log("deck id passed from deck list " + this.deckId)
   }
 
+  // selects active card
   selectedCard = 0;
 
   ngOnInit(): void {
@@ -29,7 +28,8 @@ export class CarouselComponent implements OnInit {
       (cards: Card[]) => {
       this.cards = cards
 
-      // Reindex cards 
+      // Reindex cards
+      // Carousel expects the index to start at 0
       for(let i = 0; i < this.cards.length; i++){
         cards[i].cardId = i
         console.log(cards[i].cardId)
@@ -37,6 +37,7 @@ export class CarouselComponent implements OnInit {
     })
   }
 
+  // Brings card to view
   selectCard(index: number) {
     this.selectedCard = index;
   }
@@ -57,6 +58,7 @@ export class CarouselComponent implements OnInit {
     }
   }
 
+  // for jquery to track card order
   trackCard(index: number, card: Card) {
     return card ? card.cardId : undefined;
   }

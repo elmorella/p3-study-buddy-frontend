@@ -24,7 +24,16 @@ export class CardService {
     return this.card
   }
 
+  getCardsByQuery(query: String): Observable<Card[]> {
+    return this.http.get<Card[]>(`${this.BASE_URL}/card/search/` + query);
+  }
+
+  saveCard(card: Card){
+    return this.http.post<Card>(`${this.BASE_URL}/card/add`, card)
+  }
+
   getCardSet() {
     return this.card
   }
+
 }

@@ -18,8 +18,8 @@ export class NoteService {
     return this.http.get<any[]>(`${this.BASE_URL}/note/all`);
   }
 
-  getNoteByQuery(){
-    return 
+  getNoteByQuery(query: String){
+    return this.http.get<Note[]>(`${this.BASE_URL}/note/search/` + query); 
   }
 
   getNoteByID(id: number){

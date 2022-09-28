@@ -35,4 +35,5 @@ export class CardService {
   getCardSet() {
     return this.card
   }
+
 }

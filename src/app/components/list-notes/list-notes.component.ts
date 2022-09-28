@@ -7,14 +7,21 @@ import { NoteService } from 'src/app/services/note.service';
   templateUrl: './list-notes.component.html',
   styleUrls: ['./list-notes.component.css']
 })
+
 export class ListNotesComponent implements OnInit {
 
   notes: Note[] = []
 
-  constructor(private cardService: NoteService) {
-    this.notes = this.cardService.getAllNotes()
-   }
+  constructor(private noteService: NoteService) {
+  }
+
 
   ngOnInit(): void {
+    console.log()
+    this.noteService.getAllNotes().subscribe(
+      (notes: Note[]) => {
+        this.notes = notes
+      })
+    console.log(this.notes)
   }
 }

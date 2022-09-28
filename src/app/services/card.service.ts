@@ -1,23 +1,30 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
+import { Observable } from "rxjs";
 import { Card } from '../model/card.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CardService {
-  cardSet: Card[] = []
 
-  constructor() {
-    for (let i = 0; i < 9; i++) {
-      let card = new Card()
-      card.cardId = i
-      card.title = "Title of Card #" + i
-      card.description = "Subject #" + i
-      this.cardSet.push(card)
-    }
+  BASE_URL = 'http://localhost:7001'
+
+  card: Card = new Card
+
+  constructor(private http: HttpClient) {}
+
+  getCardsByDeckId(deckId: number): Observable<any[]>{
+    return this.http.get<any[]>(`${this.BASE_URL}/card/` + deckId);
+  }
+
+  getCardById(cardId: number) {
+    this.card.cardId = cardId
+    this.card.title = "This card id is: " + cardId
+    return this.card
   }
 
   getCardSet() {
-    return this.cardSet
+    return this.card
   }
 }

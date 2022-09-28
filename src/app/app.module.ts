@@ -5,33 +5,41 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoteService } from './services/note.service';
 import { CardService } from './services/card.service';
-import { CKEditorModule } from 'ng2-ckeditor';
+import { DeckService } from './services/deck.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { CKEditorModule } from 'ng2-ckeditor'
 import { FormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { CreateNotesComponent } from './components/create-notes/create-notes.component';
 import { RichTextEditorComponent } from './components/rich-text-editor/rich-text-editor.component';
 import { NoteCardRelationComponent } from './components/note-card-relation/note-card-relation.component';
 import { MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { MatIconModule } from '@angular/material/icon';
+=======
+import { MatIconModule } from '@angular/material/icon'
+import { HttpClientModule } from '@angular/common/http';
+>>>>>>> main
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents,
-    CreateNotesComponent,
-    RichTextEditorComponent,
-    NoteCardRelationComponent
+    routingComponents
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
     CKEditorModule,
     FormsModule,
-    MatButtonModule,
+    MatIconModule,
     BrowserAnimationsModule,
-    MatIconModule
+    HttpClientModule
   ],
-  providers: [CardService, NoteService],
+  providers: [CardService, DeckService, NoteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

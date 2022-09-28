@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateNotesComponent implements OnInit {
 
+  noteBody : string = "";
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  setNoteBody(text : string){
+    this.noteBody = text;
+  }
 }

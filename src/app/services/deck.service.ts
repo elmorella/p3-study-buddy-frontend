@@ -38,6 +38,6 @@ export class DeckService {
   }
 
   getDeckById(id: number) {
-    return
+    return this.http.get<Deck>(`${this.BASE_URL}/deck/` + id);
   }
 }

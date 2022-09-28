@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
+import { Observable } from "rxjs";
 import { Card } from '../model/card.model';
 
 @Injectable({
@@ -7,12 +8,14 @@ import { Card } from '../model/card.model';
 })
 export class CardService {
 
+  BASE_URL = 'http://localhost:7001'
+
   card: Card = new Card
 
-  constructor() {
-    this.card.cardId = 25
-    this.card.title = "what is the answer to life the universe and everything?"
-    this.card.description = "42"
+  constructor(private http: HttpClient) {}
+
+  getCardsByDeckId(deckId: number): Observable<any[]>{
+    return this.http.get<any[]>(`${this.BASE_URL}/card/` + deckId);
   }
 
   getCardById(cardId: number) {

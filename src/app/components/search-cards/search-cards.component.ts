@@ -11,7 +11,7 @@ import { ActivatedRoute } from "@angular/router";
 export class SearchCardsComponent implements OnInit {
 
   decks: Deck[] = [];
-  name:string =  '';
+  searchTerm:string =  '';
   
   constructor(private deckService: DeckService, private route:ActivatedRoute) { 
     // this.decks = this.deckService.getAllDecks()
@@ -25,9 +25,9 @@ export class SearchCardsComponent implements OnInit {
     //   else  
     //     this.decks = this.deckService.getAllDecks();
     // })
-
-    
-
+    this.searchTerm = this.route.snapshot.paramMap.get("searchTerm")!
+  
+    this.deckService.getDecksByQuery(this.searchTerm).subscribe((decks: Deck[])=>{this.decks = decks});
   }
 
   

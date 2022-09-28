@@ -11,11 +11,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { CKEditorModule } from 'ng2-ckeditor'
 import { MatIconModule } from '@angular/material/icon'
 import { HttpClientModule } from '@angular/common/http';
+import { SearchNotesComponent } from './components/search-notes/search-notes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+    SearchNotesComponent
   ],
   imports: [
     BrowserModule,

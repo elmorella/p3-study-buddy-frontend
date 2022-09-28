@@ -40,4 +40,10 @@ export class DeckService {
   getDeckById(id: number) {
     return this.http.get<Deck>(`${this.BASE_URL}/deck/` + id);
   }
+
+  getDecksByQuery(query: String): Observable<Deck[]> {
+    return this.http.get<Deck[]>(`${this.BASE_URL}/deck/search/` + query);
+  }
+
+
 }

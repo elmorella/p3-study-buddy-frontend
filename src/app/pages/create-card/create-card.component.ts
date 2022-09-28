@@ -16,13 +16,19 @@ export class CreateCardComponent implements OnInit {
   constructor(private deckservice: DeckService) { }
 
   ngOnInit(): void {
-    // this.deckList = this.deckservice.getAllDecks();
+   this.deckservice.getAllDecks()
+   .subscribe( (decks)=> {
+    this.deckList = decks;
+   })
   }
 
   openDeck(number:any){
-    // //save  current selected deck before changing 
-    // this.selectedDeck = this.deckservice.getDeckById(number)
-    // console.log(this.selectedDeck)
+    //save  current selected deck before changing 
+    this.deckservice.getDeckById(number)
+    .subscribe((deck)=> {
+      this.selectedDeck = deck;
+    })
+    console.log(this.selectedDeck)
   }
 
   addCardtoSet(forms:any){

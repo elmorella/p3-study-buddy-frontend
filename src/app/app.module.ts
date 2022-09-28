@@ -8,7 +8,7 @@ import { CardService } from './services/card.service';
 import { DeckService } from './services/deck.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import { CKEditorModule } from 'ng2-ckeditor'
+import { CKEditorModule } from 'ng2-ckeditor';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon'
 import { HttpClientModule } from '@angular/common/http';

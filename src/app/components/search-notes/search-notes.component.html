@@ -1,0 +1,18 @@
+<div class="box">
+    <h2>Notes</h2>
+    <div class="container">
+        <div class="col-sm-4" *ngFor="let note of notes">
+            <div class="card btn" routerLink='/card' style="width: 18rem;">
+                <div class="card-body">
+                    <h3 class="card-title">{{note.title}}</h3>
+                    <hr>
+                    <p class="card-subtitle mb-2 ">{{note.body}}</p>
+                    <p class="card-text">Flashcard
+                    </p>
+                    <!-- <a href="#" class="card-link">Card link</a> -->
+                    <!-- <a href="#" class="card-link">Another link</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -47,7 +47,7 @@ export class DeckService {
     return this.deckSet
   }
 
-  getDeckById(id: number) {
+  getDeckById(id: number): Deck {
     // this.deck.deckId = id
     // this.deck.description = "Deck description #" + id
     // this.deck.title = "Deck title #" + id
@@ -65,6 +65,16 @@ export class DeckService {
     //   deck.cardSet.push(card)
     //   this.deckSet.push(deck)
     // }
-    return this.deckSet[id]
+
+    let deck: Deck = new Deck()
+    deck.deckId = 2;
+    deck.title = "pizza";
+    deck.description = "pepperoni"
+    let card: Card = new Card();
+    card.title = "chucky";
+    card.description = "cheezus";
+    deck.cardSet.push(card);
+    console.log(deck)
+    return deck
   }
 }

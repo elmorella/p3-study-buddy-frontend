@@ -18,9 +18,11 @@ import { NoteCardRelationComponent } from './components/note-card-relation/note-
 import { RichTextEditorComponent } from 'src/app/components/rich-text-editor/rich-text-editor.component';
 
 const routes: Routes = [
-  {path: 'home', component: HomePageComponent},
-  {path:'card/:cardId', component: CardComponent},
-  {path: 'createCard', component: CreateCardComponent},
+  { path: 'home', component: HomePageComponent},
+  { path: 'decks', component: ListCardComponent},
+  { path: 'notes', component: ListNotesComponent},
+  { path:'card/:cardId', component: CardComponent},
+  { path: 'createcard', component: CreateCardComponent},
   { path: 'search', component: TestComponent},
   { path: 'search/:name', component: TestComponent},
   { path: 'note-view/:noteId', component: NoteViewComponent },

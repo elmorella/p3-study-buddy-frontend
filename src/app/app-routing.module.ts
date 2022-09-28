@@ -24,7 +24,7 @@ const routes: Routes = [
   { path:'card/:cardId', component: CardComponent},
   { path: 'createcard', component: CreateCardComponent},
   { path: 'search', component: TestComponent},
-  { path: 'search/:name', component: TestComponent},
+  { path: 'search/:searchTerm', component: TestComponent},
   { path: 'note-view/:noteId', component: NoteViewComponent },
   { path: 'carousel/:deckId', component: CarouselComponent},
   { path: 'create-notes', component: CreateNotesComponent},
@@ -51,5 +51,6 @@ export const routingComponents = [
   SearchCardsComponent,
   CreateNotesComponent,
   NoteCardRelationComponent,
-  RichTextEditorComponent
+  RichTextEditorComponent,
+  TestComponent
 ]

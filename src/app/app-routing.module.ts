@@ -20,7 +20,7 @@ import { RichTextEditorComponent } from 'src/app/components/rich-text-editor/ric
 const routes: Routes = [
   {path: 'home', component: HomePageComponent},
   {path:'card/:cardId', component: CardComponent},
-  {path: 'createCard', component: CreateCardComponent},
+  {path: 'createcard', component: CreateCardComponent},
   { path: 'search', component: TestComponent},
   { path: 'search/:name', component: TestComponent},
   { path: 'note-view/:noteId', component: NoteViewComponent },

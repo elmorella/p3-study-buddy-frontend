@@ -6,5 +6,25 @@
     (change)="saveNewNote($event)"
     [(ngModel)]="ckeditorContent">
   </ckeditor></div>
-  
+
+  <!-- <div class="container" > -->
+    <form>
+        <div class="form-group">
+            <label for="title">Save as:</label>
+            <input name="title" type="text" class="form-control" id="title" placeholder="Title">
+            
+            <!-- <label for="subject">Subject</label>
+            <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject"> -->
+        </div>
+        
+        <div class="form-group form-btn">
+            <button type="submit" class="niceBtn" >Submit</button>
+            <button routerLink="/notes" type="reset" class="niceBtn-cancel" >Cancel</button>
+        </div>
+    </form>
+    
+        <!-- <a class="cancelCreateNote" routerLink="/notes"><p>Cancel</p></a> -->
+        <!-- <button class="show" >Hide</button> -->    
 </div>
+  
+<!-- </div> -->

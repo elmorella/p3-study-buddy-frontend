@@ -6,8 +6,11 @@
   <div id="content-wrap">
 <!--Display all decks-->
 <h2 style="text-align: center; margin-top: 30px; margin-bottom: 30px;">Create a Card Deck</h2>
-<div class="screen">
-  <div class="container" style="margin-left: 25px; margin-right: 12.5px;">
+
+<h3>Your Card Decks</h3>
+<div class="top">
+  
+  <div class="row">
     <div *ngFor="let deck of deckList; let deckNumber = index;" class="carded">
       <div class="card-title">
         {{deck.title}}
@@ -21,6 +24,14 @@
         <mat-icon>add</mat-icon>
       </button>
     </div>
+  </div>
+</div>
+
+
+
+<div class="screen">
+  <div class="container" style="margin-left: 25px; margin-right: 12.5px;">
+    
 
     <!-- Add deck to db -->
     <div class="card">

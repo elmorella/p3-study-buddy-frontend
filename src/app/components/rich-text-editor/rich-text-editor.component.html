@@ -1,9 +1,8 @@
 <!-- <div class="topDecorator"></div> -->
 <div class="container">
-  <h1>You Notes Below</h1> 
+  <h1>Your Notes Below</h1> 
   <div><ckeditor 
     name="ckeditor" id="ckeditor"
-    (change)="saveNewNote($event)"
     [(ngModel)]="ckeditorContent">
   </ckeditor></div>
 
@@ -11,20 +10,20 @@
     <form>
         <div class="form-group">
             <label for="title">Save as:</label>
-            <input name="title" type="text" class="form-control" id="title" placeholder="Title">
-            
-            <!-- <label for="subject">Subject</label>
-            <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject"> -->
+            <input 
+            name="title" 
+            type="text"
+            #title="ngModel"
+            required
+            class="form-control"
+            [(ngModel)]="note.title"
+            [class.is-invalid]="title.invalid && title.touched"type="text" 
+            class="form-control" id="title" placeholder="Title">
         </div>
         
         <div class="form-group form-btn">
-            <button type="submit" class="niceBtn" >Submit</button>
+            <button type="submit" (click)="saveNote()" class="niceBtn" >Submit</button>
             <button routerLink="/notes" type="reset" class="niceBtn-cancel" >Cancel</button>
         </div>
     </form>
-    
-        <!-- <a class="cancelCreateNote" routerLink="/notes"><p>Cancel</p></a> -->
-        <!-- <button class="show" >Hide</button> -->    
 </div>
-  
-<!-- </div> -->

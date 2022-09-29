@@ -18,7 +18,7 @@ export class NoteService {
     return this.http.get<any[]>(`${this.BASE_URL}/note/all`);
   }
 
-  getNoteByQuery(query: String){
+  getNotesByQuery(query: String){
     return this.http.get<Note[]>(`${this.BASE_URL}/note/search/` + query); 
   }
 
@@ -26,7 +26,7 @@ export class NoteService {
     return this.http.get<any>(`${this.BASE_URL}/note/` + id)
   }
 
-  getCardsByQuery(query: String): Observable<Note[]> {
-    return this.http.get<Note[]>(`${this.BASE_URL}/note/search/` + query);
+  saveNote(note: Note) {
+    return this.http.post(`${this.BASE_URL}/note/add`, note)
   }
 }

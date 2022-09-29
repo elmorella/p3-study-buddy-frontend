@@ -5,6 +5,23 @@
     }
 }
 
-.decorativeBox {
-    padding: 10%;
+#page-container {
+    position: relative;
+    min-height: 100vh;
 }
+
+#content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+}
+
+/* .hidden{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    top: 0px;
+    left: 100%;
+    position: sticky;
+    border-style: solid;
+    border-color: #7CAE7A;
+    background-color: #7CAE7A;
+} */

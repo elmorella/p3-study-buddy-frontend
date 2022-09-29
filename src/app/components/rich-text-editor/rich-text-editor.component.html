@@ -1,8 +1,10 @@
-<div class="topDecorator"></div>
+<!-- <div class="topDecorator"></div> -->
 <div class="container">
-    <ckeditor 
+  <h1>You Notes Below</h1> 
+  <div><ckeditor 
     name="ckeditor" id="ckeditor"
     (change)="saveNewNote($event)"
     [(ngModel)]="ckeditorContent">
-  </ckeditor>
+  </ckeditor></div>
+  
 </div>

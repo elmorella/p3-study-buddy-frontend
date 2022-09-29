@@ -1,8 +1,9 @@
 .jumbotron{
-    background-color: #FEFBFD;
-    /* box-shadow: -10px 10px 20px #7CAE7A; */
-    border-bottom-style: solid;
-    border-bottom-color: #7CAE7A;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    /* border-bottom-style: solid; */
+    /* border-bottom-color: #7CAE7A; */
+    box-shadow: inset 0px -3px 6px #3a405a1e;
     display: flex;
     justify-content: space-around;
     margin-bottom: 50px;
@@ -16,4 +17,8 @@
 
 .carousel-inner img {
     max-width: 100%;
+}
+
+img{
+    height: 300px;
 }

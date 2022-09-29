@@ -12,12 +12,14 @@ import { CKEditorModule } from 'ng2-ckeditor'
 import { MatIconModule } from '@angular/material/icon'
 import { HttpClientModule } from '@angular/common/http';
 import { SearchNotesComponent } from './components/search-notes/search-notes.component';
+import { CreateNotesComponent } from './components/create-notes/create-notes.component';
+import {MatDialogModule, MatDialogConfig, MatDialog} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    SearchNotesComponent
+    SearchNotesComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,8 +31,10 @@ import { SearchNotesComponent } from './components/search-notes/search-notes.com
     MatIconModule,
     BrowserAnimationsModule,
     HttpClientModule
+    
   ],
   providers: [CardService, DeckService, NoteService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [CreateNotesComponent]
 })
 export class AppModule { }

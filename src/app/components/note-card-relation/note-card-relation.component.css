@@ -1,31 +1,79 @@
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10%;
-    border: solid lightgrey 1px;
-    display: flex;
-    flex-wrap: wrap;
+.container{
+    /* background: hsla(320, 60%, 99%, 1);
+    background: linear-gradient(315deg, hsla(320, 60%, 99%, 1) 15%, hsla(229, 22%, 29%, 1) 97%);
+    background: -moz-linear-gradient(315deg, hsla(320, 60%, 99%, 1) 15%, hsla(229, 22%, 29%, 1) 97%);
+    background: -webkit-linear-gradient(315deg, hsla(320, 60%, 99%, 1) 15%, hsla(229, 22%, 29%, 1) 97%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fefbfd", endColorstr="#3a405a", GradientType=1 ); */
+
+    border-radius: 25px;
+    width: 45%;
+    height: auto;
+    /* border: black;
+    border-style: solid; */
+    /* display: flex; */
+    /* top: 80px; */
+    left: 100%;
+    margin-top: 60px;
+    /* margin-bottom: 40px; */
+    /* position: sticky; */
+    /* border-style: solid;
+    border-color: #7CAE7A;
+    background-color: #7CAE7A; */
+    background-color: rgba(150, 150, 150, 0.15);
+    backdrop-filter: blur(1px);
+    box-shadow: 4px 4px 4px #bcbebc;
 }
 
+label{
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    margin-top: 13px;
+}
+
+.form-control{
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    height: 30px;
+    border-style: solid;
+    border-color: #9ec29c8a;
+    border-width: 3px;
+    border-radius: 40px;
+    
+}
 .form-control:focus {
     border-color: #9EC29C;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
 }
+
 .niceBtn {
     background-color: #9EC29C;
     border: 2px solid #9EC29C;
     border-color: #9EC29C;
     border-radius: 4px;
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     margin-left: 70px;
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+
 }
+
 .material-symbols-rounded {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    
+
 }
 form{
     align-items: center;
@@ -33,12 +81,53 @@ form{
     grid-template-columns: 1fr 1fr;
 }
 
-.cancelCreateNote {
-    align-self: flex-end;
-    margin-left: auto;
+.row{
+    display: flex;
+    align-content: center;
 }
 
-.topDecorator {
+.cancelCreateNote {
+    /* align-self: flex-end; */
+    margin-right: auto;
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    /* -webkit-text-stroke: 1px #FEFBFD; */
+    /* color: #FEFBFD; */
+}
+
+.show{
+    align-self: flex-start;
+    /* margin-left: auto; */
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    border: none;
+    background: none;
+    
+}
+
+
+
+.card{
+    background: hsla(320, 60%, 99%, 1);
+    background: linear-gradient(135deg, hsla(320, 60%, 99%, 1) 15%, hsla(229, 22%, 29%, 1) 97%);
+    background: -moz-linear-gradient(135deg, hsla(320, 60%, 99%, 1) 15%, hsla(229, 22%, 29%, 1) 97%);
+    background: -webkit-linear-gradient(135deg, hsla(320, 60%, 99%, 1) 15%, hsla(229, 22%, 29%, 1) 97%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fefbfd", endColorstr="#3a405a", GradientType=1 );
+
+    height: 600px;
+    width: 90%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+
+/* .topDecorator {
 
     height:48px;
     width:100%;
@@ -50,6 +139,7 @@ form{
     background: -webkit-linear-gradient(315deg, hsla(333, 69%, 97%, 1) 31%, hsla(349, 78%, 62%, 1) 96%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FDF4F8", endColorstr="#EA526F", GradientType=1 );
 
-    /* border-bottom-style: solid; */
+    border-bottom-style: solid;
     border-bottom-width: 2px;
-    border-bottom-color: #839073;}
+    border-bottom-color: #839073;
+} */

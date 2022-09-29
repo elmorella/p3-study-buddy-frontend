@@ -61,7 +61,7 @@
             {{card.description}}
           </div>
         </div>
-        <div *ngIf="deckCardSet != null">
+        <div *ngIf="selectedDeck.deckId != null">
           <div class="card">
             <form class="needs-validated" (submit)="addCardtoDeck(addCard)" #addCard="ngForm" novalidate>
               <h5 *ngIf="selectedDeck.title">Add cards to deck: <br>{{selectedDeck.title}}</h5>

@@ -19,7 +19,7 @@ export class SearchNotesComponent implements OnInit {
 
     this.searchTerm = this.route.snapshot.paramMap.get("searchTerm")!
   
-    this.noteService.getNoteByQuery(this.searchTerm).subscribe((notes: Note[])=>{this.notes = notes});
+    this.noteService.getNotesByQuery(this.searchTerm).subscribe((notes: Note[])=>{this.notes = notes});
 
   }
 

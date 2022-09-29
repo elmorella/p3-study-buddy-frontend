@@ -4,7 +4,14 @@
 
 
 body{
-    background-color: #FEFBFD;
+    background: hsla(320, 60%, 99%, 1);
+    background: linear-gradient(270deg, hsla(320, 60%, 99%, 1) 23%, hsla(231, 18%, 86%, 1) 76%);
+    background: -moz-linear-gradient(270deg, hsla(320, 60%, 99%, 1) 23%, hsla(231, 18%, 86%, 1) 76%);
+    background: -webkit-linear-gradient(270deg, hsla(320, 60%, 99%, 1) 23%, hsla(231, 18%, 86%, 1) 76%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#fefbfd", endColorstr="#d4d6e1", GradientType=1 );
+    
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 h1{
@@ -50,5 +57,5 @@ a{
   font-family: sans-serif;
 } */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* html, body { height: 100%; } */
+/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CreateNotesComponent implements OnInit {
 
   noteBody : string = "";
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit(): void {
   }
@@ -16,4 +16,11 @@ export class CreateNotesComponent implements OnInit {
   setNoteBody(text : string){
     this.noteBody = text;
   }
+
+  // onShow(){
+  //   this.dialog.open(NoteCardRelationComponent);
+  // }
+
+  
+
 }

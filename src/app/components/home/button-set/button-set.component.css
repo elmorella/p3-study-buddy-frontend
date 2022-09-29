@@ -1,7 +1,7 @@
 .container{
     background-color: rgba(255, 255, 255, .15);
     backdrop-filter: blur(5px);
-    box-shadow: 5px 5px 5px #C1D9C1;
+    /* box-shadow: 5px 5px 5px #C1D9C1; */
     border-radius: 25px;
     max-height: 300px;
     width: 75%;
@@ -31,9 +31,10 @@
 }
 
 .card{
+    border-radius: 25px;
     margin-top: 30px;
     margin-left: 25px;
-    box-shadow: -10px -10px 15px #C1D9C1;
+    box-shadow: -10px -10px 15px #3a405a1e;
 }
 
 .card-title{

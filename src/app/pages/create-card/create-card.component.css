@@ -1,80 +1,125 @@
 
 .form-control {
-    position: relative;
-    color: #3A405A;
-    border-radius: 5px 10px 7px;
-    border-width: 1px;
-    border-color: #9EC29C;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  position: relative;
+  
+  border-radius: 25px;
+  border-style: solid;
+  border-color: #9ec29c8a;
+  border-width: 3px;
+  
+
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #3A405A;
+}
+
+.form-control:focus {
+  border-color: #9EC29C;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
 }
 
 textarea {
-    position: relative;
-    color: #3A405A;
-    border-radius: 5px 10px 7px;
-    border-width: 1px;
+  position: relative;
+  color: #3A405A;
+  border-radius: 25px;
+  border-width: 1px;
 }
 
 .card {
-    width: 100%;
-    height: fit-content;
-    box-shadow: -10px -10px 15px #C1D9C1;
-    box-sizing: border-box;
-    border-radius: 5px 10px 7px;
-    border-width: 1px;
-    padding: 10px;  
+  width: 100%;
+  padding: 10px; 
+  height: fit-content;
+  box-sizing: border-box;
+  border-radius: 25px;
+  background-color: rgba(150, 150, 150, 0.15);
+  backdrop-filter: blur(1px);
+  box-shadow: 4px 4px 4px #bcbebc;
+}
+
+.carded{
+  box-shadow: 4px 4px 15px #bcbebc;
+  background: #ECF3EC;
+  width: 100%;
+  padding: 10px; 
+  height: fit-content;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+
+.card-title{
+  font-family: sirenia, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 25px;
+  color: #3A405A;
+}
+
+.card-discription{
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #3A405A;
 }
 
 .container {
-    height: 100%;
-    width:100%;
+    height: 65%;
+    width:75%;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 25px;
-    box-shadow: -10px -10px 15px #C1D9C1;
+    /* box-shadow: -10px -10px 15px #C1D9C1; */
     box-sizing: border-box;
-    border-radius: 5px 10px 7px;
-    border-width: 1px;
-    padding: 25px;  
+    /* border-radius: 5px 10px 7px; */
+    /* border-width: 1px; */
+    /* padding: 25px;   */
     overflow-y: auto;
 }
 
 .button {
-    background-color: #9EC29C;
-    border: 2px solid #9EC29C;
-    border-color: #9EC29C;
-    border-radius: 4px;
-    font-size: 20px;
-    color: white;
-    position: relative;
-    margin-top: 10px;
-    width: fit-content;
-    float: right;
+  background-color: #9EC29C;
+  border: 2px solid #9EC29C;
+  border-color: #9EC29C;
+  border-radius: 4px;
+  font-size: 20px;
+  color: white;
+  position: relative;
+  margin-top: 10px;
+  width: fit-content;
+  float: right;
 }
 
 .mat-mini-fab{
-    float: right;
-    margin-top: 10px;
-    background-color: #9EC29C;
+  float: right;
+  margin-top: 10px;
+  background-color: #9EC29C;
 }
 
-.material-symbols-rounded {
+/* .material-symbols-rounded {
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
     'GRAD' 0,
     'opsz' 48
-  }
+  } */
 
   label{
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
     font-weight: 500;
-    font-family: sirenia, sans-serif;
-    font-size: 20px;
+    font-style: normal;
+    font-size: 15px;
+    margin-top: 13px;
   }
 
   .screen{
     width: 100%;
-    height: 433px;
+    height: 800px;
     display: grid;
     grid-template-columns: auto auto;
     grid-area: auto;
@@ -100,6 +145,61 @@ textarea {
 
     /* border-bottom-style: solid; */
     border-bottom-width: 2px;
-    border-bottom-color: #839073;}
+    border-bottom-color: #839073;
+  }
 
-  
+  #page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+}
+
+/* Snackbar */
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}

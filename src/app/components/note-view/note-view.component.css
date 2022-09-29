@@ -4,11 +4,22 @@
     margin-right: auto;
     margin-top: 50px;
     width: 50%;
+    
+    
 }
 
 .card-header {
     max-width: 30rem;
     border: 1px solid #e5e5e5;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 4px 0px 15px #bcbebc;
+    background: #ECF3EC;
+    
+    font-family: sirenia, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
 }
 
 .card {
@@ -16,6 +27,26 @@
     height: 40rem;
     overflow-y:scroll;
     border-top: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 4px 4px 15px #bcbebc;
+    background: #ECF3EC;
+}
+
+.card-title{
+    font-family: sirenia, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.card-text{
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.card::-webkit-scrollbar{
+    width: 0px;
 }

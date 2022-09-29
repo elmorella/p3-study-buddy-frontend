@@ -1,41 +1,30 @@
-import { Component, Output, EventEmitter,OnInit } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit } from '@angular/core';
+import { Note } from 'src/app/model/note.model';
+import { NoteService } from 'src/app/services/note.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-rich-text-editor',
   templateUrl: './rich-text-editor.component.html',
-  template: `
-  <ckeditor
-    [(ngModel)]="ckeditorContent"
-    [config]="{uiColor: '#99000'}"
-    [readonly]="false"
-    (change)="onChange($event)"
-    (editorChange)="onEditorChange($event)" 
-    <!-- CKEditor change event -->
-    (ready)="onReady($event)"
-    (focus)="onFocus($event)"
-    (blur)="onBlur($event)"
-    (contentDom)="onContentDom($event)"
-    (fileUploadRequest)="onFileUploadRequest($event)"
-    (fileUploadResponse)="onFileUploadResponse($event)"
-    (paste)="onPaste($event)"
-    (drop)="onDrop($event)"
-    debounce="500">
-  </ckeditor>
-  `,
   styleUrls: ['./rich-text-editor.component.css']
 })
 export class RichTextEditorComponent implements OnInit {
+  ckeditorContent: string = ''
+  note: Note = new Note()
+  constructor(private noteService: NoteService, private router: Router) { }
 
-  constructor() { }
+  ngOnInit(): void { }
 
-  @Output()
-  emitter = new EventEmitter<string>();
-  ckeditorContent: string = '<p>Note Details...</p>';
-
-  ngOnInit(): void {}
-
-  saveNewNote(event : any){
-    this.emitter.emit(this.ckeditorContent)
+  saveNote() {
+    let note: Note = new Note()
+    note.title = this.note.title
+    note.body = this.ckeditorContent
+    this.noteService.saveNote(note).subscribe(
+      (note: Note) => {
+        console.log("note title " + note.title)
+        console.log("note body " + note.body)
+      })
+      this.router.navigate(['/notes'])
   }
-
 }

@@ -200,13 +200,17 @@ textarea {
     border-bottom-color: #839073;
   }
 
-  #page-container {
-    position: relative;
-    min-height: 100vh;
+#page-container {
+  position: relative;
+  
 }
 
 #content-wrap {
-    padding-bottom: 2.5rem;    /* Footer height */
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+body{
+  min-height: 100vh;
 }
 
 /* Snackbar */

@@ -2,15 +2,17 @@
   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+<div id="page-container">
+  <div id="content-wrap">
 <!--Display all decks-->
 <h2 style="text-align: center; margin-top: 30px; margin-bottom: 30px;">Create a Card Deck</h2>
 <div class="screen">
   <div class="container" style="margin-left: 25px; margin-right: 12.5px;">
-    <div *ngFor="let deck of deckList; let deckNumber = index;" class="card">
+    <div *ngFor="let deck of deckList; let deckNumber = index;" class="carded">
       <div class="card-title">
-        <h3>{{deck.title}}</h3>
+        {{deck.title}}
       </div>
-      <div>
+      <div class="card-discription">
         {{deck.description}}
       </div>
 
@@ -65,4 +67,6 @@
       </div>
     </div>
   </div>
+</div>
+</div>
 </div>

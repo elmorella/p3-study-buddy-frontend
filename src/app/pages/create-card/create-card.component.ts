@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Card } from 'src/app/model/card.model';
 import { Deck } from 'src/app/model/deck.model';
 import { DeckService } from 'src/app/services/deck.service';
+import { CardService } from 'src/app/services/card.service';
 
 
 @Component({
@@ -10,43 +11,55 @@ import { DeckService } from 'src/app/services/deck.service';
   styleUrls: ['./create-card.component.css']
 })
 export class CreateCardComponent implements OnInit {
-  deckList: Deck[]=[];
+  deckList: Deck[] = [];
   selectedDeck: Deck = new Deck();
+  selectedDeckId: number = 0;
+  deckCardSet: Card[] =  [];
 
-  constructor(private deckservice: DeckService) { }
+  constructor(private deckservice: DeckService, private cardService: CardService) { }
 
   ngOnInit(): void {
-    // this.deckList = this.deckservice.getAllDecks();
+   this.deckservice.getAllDecks()
+   .subscribe( (decks)=> {
+    this.deckList = decks;
+   })
   }
 
-  openDeck(number:any){
-    // //save  current selected deck before changing 
-    // this.selectedDeck = this.deckservice.getDeckById(number)
-    // console.log(this.selectedDeck)
+  openDeck(deckId: number){
+    this.selectedDeckId = deckId
+    this.deckservice.getDeckById(deckId).subscribe(
+      (deck)=> {this.selectedDeck = deck
+        console.log(this.selectedDeck.deckId)
+      }) 
   }
 
-  addCardtoSet(forms:any){
+  addCardtoDeck(forms:any){
     if (!forms.value.word || !forms.value.definition){
 
     }
     else {
-    let card = new Card();
-    card.title = forms.value.word;
-    card.description = forms.value.definition;
-    this.selectedDeck.cardSet.push(card);
+    let newCard = new Card();
+    newCard.title = forms.value.word;
+    newCard.description = forms.value.definition;
+    newCard.deck = this.selectedDeck
+    
+    // Save card to db
+    this.cardService.saveCard(newCard).subscribe((card: Card) => {newCard = card})
+    forms.reset
+
     }
   }
 
-  addDecktoList(forms:any){
+  addDecktoDatabase(forms:any){
     if (!forms.value.title || !forms.value.description){
 
     }
     else{
-      let tempDeck = new Deck();
-      tempDeck.title = forms.value.title;
-      tempDeck.description = forms.value.description;
-      this.deckList.push(tempDeck);
+      let newDeck = new Deck();
+      newDeck.title = forms.value.title;
+      newDeck.description = forms.value.description;
+      this.deckList.push(newDeck);
+      this.deckservice.saveDeck(newDeck).subscribe((deck: Deck) => {newDeck = deck})
     }
-    
   }
 }

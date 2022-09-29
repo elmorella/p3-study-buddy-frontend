@@ -15,10 +15,6 @@ export class ListCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.deckService.getAllDecks().subscribe(
-      (decks: Deck[]) => {
-      this.decks = decks
-    })
-    console.log("List Card Component: deck" + this.decks)
+    this.deckService.getAllDecks().subscribe((decks: Deck[]) => {this.decks = decks})
   }
 }

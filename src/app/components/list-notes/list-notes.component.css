@@ -30,3 +30,7 @@
 #content-wrap {
     padding-bottom: 2.5rem;    /* Footer height */
 }
+
+.mat-fab{
+    background-color: #9EC29C;
+}
